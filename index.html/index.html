@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javed's Furniture</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+}
+
+/* Header */
+header{
+    background:#5a3e2b;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd28d;
+}
+
+/* Hero Section */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#c48a4f;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    border-radius:5px;
+    text-decoration:none;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#a86f37;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    margin:60px 0 30px;
+    font-size:36px;
+    color:#5a3e2b;
+}
+
+/* Products */
+.products{
+    padding:20px 8% 80px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#c48a4f;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.buy-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#5a3e2b;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.buy-btn:hover{
+    background:#3f291d;
+}
+
+/* About */
+.about{
+    background:white;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Contact */
+.contact{
+    padding:80px 10%;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#5a3e2b;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.contact button:hover{
+    background:#3f291d;
+}
+
+/* Footer */
+footer{
+    background:#5a3e2b;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Javed's Furniture</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Furniture</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Javed's Furniture</h1>
+        <p>Elegant Furniture For Modern Living</p>
+        <a href="#products" class="btn">Explore Collection</a>
+    </div>
+</section>
+
+<!-- Products -->
+<section class="products" id="products">
+    <h2 class="section-title">Our Furniture Collection</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Luxury Sofa</h3>
+                <p>Comfortable and stylish sofa for your living room.</p>
+                <div class="price">139,000</div>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Wooden Bed</h3>
+                <p>Premium quality wooden bed with modern design.</p>
+                <div class="price">195,000</div>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Dining Table</h3>
+                <p>Elegant dining table perfect for family gatherings.</p>
+                <div class="price">111,000</div>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=800&q=80">
+            <div class="card-content">
+                <h3>Office Chair</h3>
+                <p>Ergonomic chair designed for productivity.</p>
+                <div class="price">55,000</div>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2 class="section-title">About Us</h2>
+    <p>
+        Welcome to Javed's Furniture. We specialize in premium-quality
+        furniture crafted with elegance, comfort, and durability in mind.
+        Our mission is to transform houses into beautiful homes through
+        exceptional furniture designs and outstanding customer service.
+    </p>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Javed's Furniture | All Rights Reserved</p>
+</footer>
+
+<script>
+// Add to Cart functionality
+const buttons = document.querySelectorAll(".buy-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        alert("Item added to cart successfully!");
+    });
+});
+
+// Contact Form
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Thank you! Your message has been sent.");
+    this.reset();
+});
+</script>
+
+</body>
+</html>
